@@ -71,19 +71,33 @@ local plugins = {
             return require "custom.configs.null-ls"
         end,
     },
+--    {
+--        "olexsmir/gopher.nvim",
+--      ft = "go",
+--      config = function(_, opts)
+--          require("gopher").setup(opts)
+--      end,
+--      build = function()
+--          vim.cmd [[silent! GoInstallDeps]]
+--      end,
+--  },
     {
-        "olexsmir/gopher.nvim",
-        ft = "go",
-        config = function(_, opts)
-            require("gopher").setup(opts)
+        "ray-x/go.nvim",
+        dependencies = {  -- optional packages
+            "ray-x/guihua.lua",
+            "neovim/nvim-lspconfig",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        config = function()
+            require("go").setup()
         end,
-        build = function()
-            vim.cmd [[silent! GoInstallDeps]]
-        end,
+        event = {"CmdlineEnter"},
+        ft = {"go", 'gomod'},
+        build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     },
     {
         "nvim-treesitter/nvim-treesitter-context",
-        event = "BufRead",
+        lazy = false,
         dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
@@ -106,6 +120,13 @@ local plugins = {
             vim.keymap.set("n", "<leader>fd", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
             vim.keymap.set("n", "<leader>pd", "<cmd>Telescope dir find_files<CR>", { noremap = true, silent = true })
         end,
-    }
+    },
+    {
+        "RRethy/vim-illuminate",
+        lazy = false,
+        config = function ()
+            require("custom.configs.illuminate").setup()
+        end,
+    },
 }
 return plugins
