@@ -159,6 +159,10 @@ local plugins = {
                 performance_mode = false,    -- Disable "Performance Mode" on all buffers.
             })
         end
+    },
+    {
+        "pocco81/auto-save.nvim",
+        lazy = false,
     }
 }
 return plugins
