@@ -12,6 +12,8 @@ filezilla
 binwalk
 configstore
 
+.idea
+
 .gitignore
 *.log
 .DS_Store
