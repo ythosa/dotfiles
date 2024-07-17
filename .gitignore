@@ -9,3 +9,9 @@ iterm2
 htop
 fish
 filezilla
+binwalk
+configstore
+
+.gitignore
+*.log
+.DS_Store

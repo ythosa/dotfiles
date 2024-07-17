@@ -50,3 +50,15 @@ lspconfig.pyright.setup{
     capabilities = capabilities,
     filetypes = {"python"}
 }
+
+lspconfig.java_language_server.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {"java"},
+}
+
+lspconfig.kotlin_language_server.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {"kotlin"},
+}

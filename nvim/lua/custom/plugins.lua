@@ -162,7 +162,7 @@ local plugins = {
     },
     {
         "pocco81/auto-save.nvim",
-        lazy = false,
+        event = "InsertLeave"
     }
 }
 return plugins
