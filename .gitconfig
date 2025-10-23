@@ -1,0 +1,13 @@
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "ssh://git@"]
+	insteadOf = git://
+[user]
+	name = Ruslan Babin
+	email = vasus714@yandex.ru
+[alias]
+	co = checkout
+	last = rev-parse --short HEAD
+	br = branch
+	ci = commit
+	st = status
