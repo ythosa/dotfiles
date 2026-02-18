@@ -31,6 +31,13 @@ bindkey -e
 bindkey '\e\e[C' forward-word
 bindkey '\e\e[D' backward-word
 
+# zoxide
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# eza
+alias ls="eza --icons=always"
+
 # shortcuts
 alias puf="git add . && git commit --amend --no-edit && git push --force"
 alias python=python3
