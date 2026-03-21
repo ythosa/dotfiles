@@ -1,5 +1,5 @@
 # aerospace
-mkdir -p ~/.config/aerospace && cp .aerospace.toml ~/.config/aerospace/
+mkdir -p ~/.config/aerospace && cp aerospace.toml ~/.config/aerospace/
 
 # git
 cp .gitconfig ~/.gitconfig
