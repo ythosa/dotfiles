@@ -7,6 +7,9 @@ cp .gitconfig ~/.gitconfig
 # tmux
 cp .tmux.conf ~/.tmux.conf
 
+# vim
+cp .vimrc ~/.vimrc
+
 # zshrc
 cp .zshrc ~/.zshrc
 
@@ -14,7 +17,7 @@ cp .zshrc ~/.zshrc
 mkdir -p ~/.config/btop && cp btop.conf ~/.config/btop/
 
 # k9s
-mkdir -p ~/.config/k9s && cp k9s.yaml ~/.config/k9s/config.yaml
+mkdir -p "$HOME/Library/Application Support/k9s" && cp k9s.yaml "$HOME/Library/Application Support/k9s/config.yaml"
 
 # alacritty
 mkdir -p ~/.config/alacritty
